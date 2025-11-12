@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Spring Blog</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="spinner-overlay" class="hidden">
+        <div class="spinner"></div>
+    </div>
+    <div id="notification-container"></div>
+    <header>
+        <h1><a href="#" id="page-title-header">SpringBlog</a></h1>
+        <form class="nav-search-form" id="nav-search-form">
+                <input type="search" class="nav-search-input" placeholder="Search posts..." required>
+                <button type="submit" class="nav-search-btn"><i class="fas fa-search"></i></button>
+        </form>
+        <nav>
+            <a href="#" id="home-button">Home</a>
+            <a href="#create-post" id="create-post-button" class="hidden">Create Post</a>
+            <a href="#my-posts" id="my-post-link" class="hidden">My Posts</a>
+            <a href="#profile" id="profile-button" class="hidden">Profile</a>
+            <a href="#" id="logout-button" class="hidden">Logout</a>
+            <a href="#login" id="login-button">Login</a>
+            <a href="#signup" id="signup-button">Signup</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="posts-container">
+            <!-- Posts will be loaded here by JavaScript -->
+        </div>
+    </main>
+    
+
+    <!-- Confirmation modal -->
+    <div id="modal-overlay" role="dialog" class="hidden">
+        <div id="modal-confirm">
+            <p id="modal-message">Confirm the action?</p>
+            <div id="modal-actions">
+                <button id="modal-btn-confirm">Confirm</button>
+                <button id="modal-btn-cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.min.js"></script>
+    <script type="module" src="script.js"></script>
+
+</body>
+<footer>
+    <div class="footer-content">
+        <div class="footer-section footer-about">
+            <h3 class="footer-title">SpringBlog</h3>
+            <p>A simple blog platform built to share ideas and stories. Powered by Spring Boot and passion.</p>
+        </div>
+        <div class="footer-section footer-social">
+            <h3 class="footer-title">Follow Us</h3>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/Anss1/spring_blog" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/anas-saber-047-this-me/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2025 SpringBlog | Designed with care
+    </div>
+</footer>
+</html>
